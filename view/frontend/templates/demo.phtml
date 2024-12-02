@@ -15,6 +15,14 @@ use Magento\Framework\View\Element\Template; ?>
             Please visit <a href="https://www.zermatt.dev" target="_blank">https://www.zermatt.dev</a> for more information.
         </p>
         <p>This is a demo site. All links redirect to this page. No other pages are available.</p>
+        <p>
+            <a href="https://github.com/maddlen/zermatt-demo-module" class="github-link" target="_blank">
+                <span class="icon">
+                    <?php zermatt_partial('Maddlen_ZermattDemo::ui/icon-github.phtml', ['size' => 'md']) ?>
+                </span>
+                <span>View the source code of the Magento module.</span>
+            </a>
+        </p>
     </div>
 
     <div x-cloak x-data="{}" class="cards">
