@@ -1,0 +1,66 @@
+<?php
+/**
+ * @author Hervé Guétin <www.linkedin.com/in/herveguetin>
+ */
+
+use Magento\Framework\View\Element\Template; ?>
+<?php
+/** @var Template $block */
+?>
+<div class="zermatt-demo">
+    <div class="heading">
+        <h1>Zermatt demo</h1>
+        <p class="intro">
+            Examples of Zermatt in action.<br/>
+            Please visit <a href="https://www.zermatt.dev" target="_blank">https://www.zermatt.dev</a> for more information.
+        </p>
+        <p>This is a demo site. All links redirect to this page. No other pages are available.</p>
+    </div>
+
+    <div x-cloak x-data="{}" class="cards">
+        <div class="stack">
+            <div class="card counter">
+                <h2>Basic counter</h2>
+                <p class="intro">A basic counter as documented in AlpineJS documentation.</p>
+                <div x-data="{ count: 0 }">
+                    <div class="content">
+                        <button x-on:click="count++" class="action primary" title="Increment" type="button">
+                            <span>Increment</span>
+                        </button>
+                        <div>Count: <span x-text="count"></span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card counter">
+                <?php zermatt_variable('currencyAmount', 100); ?>
+                <h2>Currency formatter</h2>
+                <p class="intro">Formatting currency on the frontend on the fly.</p>
+                <?php zermatt_partial('Maddlen_ZermattDemo::modules/format-currency.phtml') ?>
+            </div>
+            <div class="card subscribe">
+                <h2>Newsletter subscription</h2>
+                <p class="intro">Subscribing to the newsletter with validation. Uses Laravel Precognition.</p>
+                <?php zermatt_partial('Maddlen_ZermattDemo::modules/subscribe.phtml') ?>
+            </div>
+        </div>
+        <div class="stack">
+            <div class="card welcome">
+                <h2>Welcome message</h2>
+                <p class="intro">The Magento welcome message. Loads with AJAX on page load to bypass FPC.</p>
+                <?php zermatt_partial('Maddlen_ZermattDemo::modules/welcome.phtml') ?>
+            </div>
+            <div class="card events">
+                <h2>Events</h2>
+                <p class="intro">Using Zermatt Events to make components communicate.</p>
+                <?php zermatt_partial('Maddlen_ZermattDemo::modules/events/events.phtml') ?>
+            </div>
+        </div>
+        <div class="stack">
+            <div class="card quick-search">
+                <h2>Quick search</h2>
+                <p class="intro">This module listens to the native header search input and performs a quick search on <a href="https://dummyjson.com/products">dummyjson.com/products</a>.</p>
+                <?php zermatt_partial('Maddlen_ZermattDemo::modules/quick-search.phtml') ?>
+            </div>
+        </div>
+    </div>
+</div>

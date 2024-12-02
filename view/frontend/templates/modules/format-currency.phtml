@@ -1,0 +1,15 @@
+<?php
+/**
+ * @author Hervé Guétin <www.linkedin.com/in/herveguetin>
+ */ ?>
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+?>
+<div x-data="Zermatt.Module('Demo_FormatCurrency')">
+    <div class="content">
+        <button x-on:click="switchLocale" class="action primary" title="Format in EUR" type="button">
+            <span>Format to <span x-text="otherLocale()"></span></span>
+        </button>
+        <div><span x-text="formattedAmount()"></span></div>
+    </div>
+</div>

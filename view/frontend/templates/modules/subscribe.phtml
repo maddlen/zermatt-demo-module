@@ -1,0 +1,39 @@
+<?php
+/**
+ * @author Hervé Guétin <www.linkedin.com/in/herveguetin>
+ */ ?>
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+?>
+<div x-data="Zermatt.Module('Demo_Subscribe')">
+    <div class="content">
+        <div x-data="Zermatt.Module('Zermatt_Form', {onSubmitted: (payload) => Zermatt.Event.dispatch('subscribe:success', {payload}),formData: {email: ''}})">
+            <form action="<?= $block->getUrl('zermattdemo/api/subscribe') ?>">
+                <template x-if="form">
+                    <div>
+                        <div x-show="submitting" class="loader"></div>
+                        <div x-show="!submitting" class="form">
+                            <div>
+                                <input x-model="form.email" @change="validate('email')" name="email" type="email" id="email" placeholder="Enter your email address"/>
+                            </div>
+                            <div>
+                                <button @click.prevent="submit" :disabled="form.processing" class="action subscribe primary" title="Subscribe" type="submit" aria-label="Subscribe">
+                                    <span>Subscribe</span>
+                                </button>
+                            </div>
+                        </div>
+                        <template x-if="form.invalid('email')">
+                            <div x-text="form.errors.email" class="mage-error"></div>
+                        </template>
+                    </div>
+                </template>
+            </form>
+        </div>
+    </div>
+    <div x-show="hasOverlay" class="overlay">
+        <div class="content">
+            <div x-text="message"></div>
+            <?php zermatt_partial('Maddlen_ZermattDemo::ui/button-reset.phtml') ?>
+        </div>
+    </div>
+</div>

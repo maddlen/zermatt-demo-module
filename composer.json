@@ -1,0 +1,20 @@
+{
+  "name": "maddllen/module-zermatt-demo",
+  "version": "1.0.0",
+  "description": "Modules showcased on demo.zermatt.dev.",
+  "type": "magento2-module",
+  "require": {
+    "magento/framework": "*"
+  },
+  "license": [
+    "MIT"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Zermatt\\Demo\\": ""
+    }
+  }
+}

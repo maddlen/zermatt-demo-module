@@ -1,0 +1,23 @@
+<?php
+/**
+ * @author Hervé Guétin <www.linkedin.com/in/herveguetin>
+ */ ?>
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+?>
+    <div x-data="Zermatt.Module('Demo_Events').input" class="component input-component">
+        <div class="content">
+            <p class="intro">Input component</p>
+            <p>The input triggers an onchange event and listens to reset events from the listening components.</p>
+            <div class="component-content">
+                <div>
+                    <input x-model="value" x-on:input="onChange" type="text" name="input-component" placeholder="<?= __("Type something...") ?>"/>
+                </div>
+                <div x-show="value">
+                    <?php zermatt_partial('Maddlen_ZermattDemo::ui/button-reset.phtml') ?>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php zermatt_partial('Maddlen_ZermattDemo::modules/events/event-listener.phtml') ?>
+<?php zermatt_partial('Maddlen_ZermattDemo::modules/events/event-listener.phtml') ?>

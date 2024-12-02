@@ -1,0 +1,16 @@
+<?php
+/**
+ * @author Hervé Guétin <www.linkedin.com/in/herveguetin>
+ */ ?>
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+?>
+<div x-data="{...Zermatt.Module('Demo_Events').listener}" class="component listening-component">
+    <p class="intro">Listening component</p>
+    <div class="component-content">
+        <div x-text="value || '<?= __('No value') ?>'"></div>
+        <div x-show="value">
+            <?php zermatt_partial('Maddlen_ZermattDemo::ui/button-reset.phtml') ?>
+        </div>
+    </div>
+</div>
