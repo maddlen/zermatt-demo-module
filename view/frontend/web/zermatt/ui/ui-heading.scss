@@ -1,0 +1,30 @@
+.zermatt-demo {
+    .heading {
+        .intro {
+            font-weight: bolder;
+        }
+        .github-link {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 4rem;
+            width: fit-content;
+            .icon {
+                display: flex;
+                align-items: center;
+                * {
+                    aspect-ratio: 1;
+                }
+                &-sm {
+                    width: 1.5rem;
+                }
+                &-md {
+                    width: 2rem;
+                }
+                &-lg {
+                    width: 3rem;
+                }
+            }
+        }
+    }
+}

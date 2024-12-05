@@ -1,0 +1,19 @@
+.zermatt-demo {
+    .events {
+        .component {
+            .intro {
+                margin-top: 3rem;
+            }
+            .component-content {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                justify-content: space-between;
+                margin-top: 1rem;
+                div:first-child {
+                    flex: 1;
+                }
+            }
+        }
+    }
+}

@@ -1,10 +1,10 @@
 {
   "modules": {
-    "Demo_Welcome": "./modules/welcome",
-    "Demo_QuickSearch": "./modules/quick-search",
-    "Demo_FormatCurrency": "./modules/format-currency",
-    "Demo_Events": "./modules/events",
-    "Demo_Subscribe": "./modules/subscribe"
+    "Demo_Welcome": "./modules/welcome/demo-welcome",
+    "Demo_QuickSearch": "./modules/quick-search/demo-quick-search",
+    "Demo_FormatCurrency": "./modules/format-currency/demo-format-currency",
+    "Demo_Events": "./modules/events/demo-events",
+    "Demo_Subscribe": "./modules/subscribe/demo-subscribe"
   },
   "rewrites": {}
 }

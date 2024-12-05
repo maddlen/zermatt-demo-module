@@ -1,0 +1,10 @@
+.zermatt-demo {
+    button {
+        &.reset {
+            border-radius: 999999px;
+            width: 2rem;
+            height: 2rem;
+            padding: 2px;
+        }
+    }
+}

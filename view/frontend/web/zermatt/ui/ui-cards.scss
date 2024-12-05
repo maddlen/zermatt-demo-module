@@ -1,0 +1,33 @@
+.zermatt-demo {
+    .stack {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        @media (min-width: 769px) {
+            width: 33.333333%;
+        }
+    }
+    .cards {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 8rem;
+        @media (min-width: 769px) {
+            flex-direction: row;
+        }
+    }
+    .card {
+        border: 1px solid #ccc;
+        padding: 2rem;
+        border-radius: 1rem;
+        overflow: hidden;
+        .intro {
+            color: #999999;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #ccc;
+        }
+        .content {
+            margin-top: 3rem;
+        }
+    }
+}
