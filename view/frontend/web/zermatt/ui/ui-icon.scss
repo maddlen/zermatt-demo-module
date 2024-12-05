@@ -1,0 +1,18 @@
+.zermatt-demo {
+    .icon {
+        display: flex;
+        align-items: center;
+        * {
+            aspect-ratio: 1;
+        }
+        &-sm {
+            width: 1.5rem;
+        }
+        &-md {
+            width: 2rem;
+        }
+        &-lg {
+            width: 3rem;
+        }
+    }
+}
